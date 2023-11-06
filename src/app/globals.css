@@ -5,7 +5,9 @@
 :root {
   --bg-primary: black;
   --bg-card: #121212;
-  --bg-card-hover: #181818
+  --bg-card-hover: #181818;
+  --text-primary: rgb(255, 255, 255);
+  --text-secondary: rgb(179, 179, 179);
 }
 
 body,
@@ -14,4 +16,5 @@ html,
   height: 100%;
   background-color: var(--bg-primary);
   color-scheme: dark;
+  color: var(--text-secondary);
 }

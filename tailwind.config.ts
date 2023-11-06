@@ -8,11 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        'background': 'black',
-        'card': '#121212',
-        'card-hover': '#181818'
-      }
     },
   },
   plugins: [],
