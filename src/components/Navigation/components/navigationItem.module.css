@@ -1,0 +1,25 @@
+.navigationItem {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: color 0.5s ease;
+    padding: 0.25rem 0.75rem;
+}
+
+.navigationItem--selected {
+    color: var(--text-primary);
+}
+
+.navigationItem__icon {
+    width: 1.6rem;
+    aspect-ratio: 1/1;
+}
+
+.navigationItem__title {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.navigationItem:hover {
+    color: var(--text-primary);
+}

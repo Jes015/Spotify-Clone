@@ -1,4 +1,5 @@
 import { fitgreeFont } from '@/assets/fonts/fitgree'
+import { Navigation } from '@/components'
 import type { Metadata } from 'next'
 import './globals.css'
 import styles from './layout.module.css'
@@ -15,11 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={[fitgreeFont.className].join(' ')}>
+      <body className={fitgreeFont.className}>
         <div
           className={styles.layout}
         >
-          <nav style={{ gridArea: 'navigation' }}>sdf</nav>
+          <Navigation />
           <aside style={{ gridArea: 'aside' }}>aside</aside>
           <main style={{ gridArea: 'main' }}>
             {children}

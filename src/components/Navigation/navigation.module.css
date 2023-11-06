@@ -1,0 +1,9 @@
+.navigation {
+    grid-area: navigation;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation > * {
+    flex-grow: 1;
+}
