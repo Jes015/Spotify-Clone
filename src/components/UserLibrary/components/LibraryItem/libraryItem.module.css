@@ -1,0 +1,35 @@
+.libraryItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.libraryItem__image {
+    border-radius: .25rem;
+}
+
+.libraryItem__data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-weight: 400;
+}
+
+.libraryItem__title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.libraryItem__desc-data {
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.libraryItem:hover {
+    background-color: var(--bg-card-hover-2);
+}

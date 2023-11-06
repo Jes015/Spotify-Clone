@@ -1,5 +1,5 @@
 import { fitgreeFont } from '@/assets/fonts/fitgree'
-import { Navigation } from '@/components'
+import { Navigation, UserLibrary } from '@/components'
 import type { Metadata } from 'next'
 import './globals.css'
 import styles from './layout.module.css'
@@ -21,7 +21,7 @@ export default function RootLayout({
           className={styles.layout}
         >
           <Navigation />
-          <aside style={{ gridArea: 'aside' }}>aside</aside>
+          <UserLibrary />
           <main style={{ gridArea: 'main' }}>
             {children}
           </main>
