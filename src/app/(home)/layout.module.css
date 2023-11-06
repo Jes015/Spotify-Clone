@@ -1,0 +1,19 @@
+.layout {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-areas:
+        "navigation main"
+        "aside main"
+        "footer footer"
+    ;
+    grid-template-columns: 3.3fr 7fr;
+    grid-template-rows: 1fr 4fr 0.65fr;
+    padding: 0.5rem;
+    height: 100%;
+}
+
+.layout>*:not(footer) {
+    background-color: var(--bg-card);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+}
