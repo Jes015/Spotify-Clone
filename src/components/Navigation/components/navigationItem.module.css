@@ -10,16 +10,6 @@
     color: var(--text-primary);
 }
 
-.navigationItem__icon {
-    width: 1.6rem;
-    aspect-ratio: 1/1;
-}
-
-.navigationItem__title {
-    font-weight: bold;
-    font-size: 1rem;
-}
-
 .navigationItem:hover {
     color: var(--text-primary);
 }

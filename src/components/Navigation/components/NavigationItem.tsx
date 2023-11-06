@@ -12,8 +12,8 @@ interface Props {
 export const NavigationItem: React.FC<Props> = ({ title, href, Icon, isSelected = false }) => {
     return (
         <Link className={[styles.navigationItem, isSelected ? styles['navigationItem--selected'] : ' '].join(' ')} {...{ href }}>
-            <Icon className={styles.navigationItem__icon} />
-            <span className={styles.navigationItem__title}>{title}</span>
+            <Icon className='icon' />
+            <span>{title}</span>
         </Link>
     )
 }

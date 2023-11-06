@@ -1,0 +1,33 @@
+.userLibrary {
+    position: relative;
+    padding: 0rem 1rem;
+    grid-area: userLibrary;
+    overflow-y: auto;
+}
+
+.userLibrary__header {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-card);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0.5rem;
+    border-bottom: 0.1rem solid var(--bg-card-hover);
+}
+
+.userLibrary__title-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: default;
+}
+
+.userLibrary__actions-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userLibrary__title-container:hover {
+    color: var(--text-primary);
+}

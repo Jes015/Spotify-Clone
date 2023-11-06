@@ -5,7 +5,8 @@
 :root {
   --bg-primary: black;
   --bg-card: #121212;
-  --bg-card-hover: #181818;
+  --bg-card-hover: #ffffff12;
+  --bg-card-hover-2: #1a1a1a;
   --text-primary: rgb(255, 255, 255);
   --text-secondary: rgb(179, 179, 179);
 }
@@ -17,4 +18,16 @@ html,
   background-color: var(--bg-primary);
   color-scheme: dark;
   color: var(--text-secondary);
+  font-weight: bold;
+}
+
+.icon {
+  width: 1.6rem;
+  aspect-ratio: 1/1;
+}
+
+.icon--md {
+  width: 1rem;
+  overflow: hidden;
+  aspect-ratio: 1/1;
 }

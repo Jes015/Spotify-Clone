@@ -1,0 +1,14 @@
+.button {
+    padding: 0.5rem;
+    background-color: transparent;
+    transition: color ease 0.2s, background-color ease 0.2s;
+}
+
+.button--rounded {
+    border-radius: 100%;
+}
+
+.button:hover {
+    background-color: var(--bg-card-hover);
+    color: var(--text-primary);
+}
