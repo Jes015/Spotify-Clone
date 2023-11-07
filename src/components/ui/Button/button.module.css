@@ -1,7 +1,22 @@
 .button {
+    color: var(--button-color);
+    background-color: var(--button-background-color);
     padding: 0.5rem;
-    background-color: transparent;
     transition: color ease 0.2s, background-color ease 0.2s;
+}
+
+.button--solid {
+    --button-color: var(--bg-primary);
+    --button-background-color: var(--text-primary);
+    --button-color-hover: var(--bg-primary);
+    --button-background-color-hover: var(--text-primary);
+}
+
+.button--default {
+    --button-color: var(--text-secondary);
+    --button-background-color: transparent;
+    --button-color-hover: var(--text-primary);
+    --button-background-color-hover: var(--bg-card-hover);
 }
 
 .button--rounded {
@@ -9,6 +24,6 @@
 }
 
 .button:hover {
-    background-color: var(--bg-card-hover);
-    color: var(--text-primary);
+    background-color: var(--button-background-color-hover);
+    color: var(--button-color-hover);
 }

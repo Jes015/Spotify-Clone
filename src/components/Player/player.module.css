@@ -1,0 +1,11 @@
+.player {
+    flex-grow: 1;
+    background-color: var(--bg-primary);
+    grid-area: player;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 100%;
+}

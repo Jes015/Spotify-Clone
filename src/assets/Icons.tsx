@@ -60,3 +60,81 @@ export const PlusIcon: Icon = (props) => {
         </svg>
     )
 }
+
+export const PreviousIcon: Icon = (props) => {
+    return (
+        <svg
+            aria-hidden="true"
+            className="Svg-sc-ytk21e-0 kPpCsU"
+            data-encore-id="icon"
+            viewBox="0 0 16 16"
+            fill="currentcolor"
+            {...props}
+        >
+            <path d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z" />
+        </svg>
+    )
+}
+
+
+export const NextIcon: Icon = (props) => {
+    return (
+        <svg
+            aria-hidden="true"
+            className="Svg-sc-ytk21e-0 kPpCsU"
+            data-encore-id="icon"
+            viewBox="0 0 16 16"
+            fill="currentcolor"
+            {...props}
+        >
+            <path d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z" />
+        </svg>
+    )
+}
+
+export const PauseIcon: Icon = (props) => {
+    return (
+        <svg
+            aria-hidden="true"
+            className="Svg-sc-ytk21e-0 kPpCsU"
+            data-encore-id="icon"
+            viewBox="0 0 16 16"
+            fill="currentcolor"
+            {...props}
+        >
+            <path d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z" />
+        </svg>
+    )
+}
+
+export const VolumeMaxIcon: Icon = (props) => {
+    return (
+        <svg
+            aria-hidden="true"
+            aria-label="Volume high"
+            className="Svg-sc-ytk21e-0 dAOlPY"
+            data-encore-id="icon"
+            viewBox="0 0 16 16"
+            fill="currentcolor"
+            {...props}
+        >
+            <path d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z" />
+            <path d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z" />
+        </svg>
+    )
+}
+
+export const HeartOutlinedIcon: Icon = (props) => {
+    return (
+        <svg
+            aria-hidden="true"
+            className="Svg-sc-ytk21e-0 kPpCsU"
+            data-encore-id="icon"
+            viewBox="0 0 16 16"
+            fill="currentcolor"
+            {...props}
+        >
+            <path d="M1.69 2A4.582 4.582 0 0 1 8 2.023 4.583 4.583 0 0 1 11.88.817h.002a4.618 4.618 0 0 1 3.782 3.65v.003a4.543 4.543 0 0 1-1.011 3.84L9.35 14.629a1.765 1.765 0 0 1-2.093.464 1.762 1.762 0 0 1-.605-.463L1.348 8.309A4.582 4.582 0 0 1 1.689 2zm3.158.252A3.082 3.082 0 0 0 2.49 7.337l.005.005L7.8 13.664a.264.264 0 0 0 .311.069.262.262 0 0 0 .09-.069l5.312-6.33a3.043 3.043 0 0 0 .68-2.573 3.118 3.118 0 0 0-2.551-2.463 3.079 3.079 0 0 0-2.612.816l-.007.007a1.501 1.501 0 0 1-2.045 0l-.009-.008a3.082 3.082 0 0 0-2.121-.861z" />
+        </svg>
+    )
+}

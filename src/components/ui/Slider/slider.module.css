@@ -1,0 +1,68 @@
+.slider {
+    --track-background-color: rgb(179 179 179 .5);
+    --thumb-background-color: var(--text-primary);
+    --track-hover-background-color: #2dff76;
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    /*  slider progress trick  */
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+/* Track: webkit browsers */
+.slider::-webkit-slider-runnable-track {
+    height: 0.33333333333rem;
+    background: var(--track-background-color);
+    border-radius: 16px;
+}
+
+/* Track: Mozilla Firefox */
+.slider::-moz-range-track {
+    height: 0.33333333333rem;
+    background: var(--track-background-color);
+    border-radius: 16px;
+}
+
+/* Thumb: webkit */
+.slider::-webkit-slider-thumb {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    height: 10.33333333333rem;
+    width: 0px;
+    background-color: var(--thumb-background-color);
+    background-color: transparent;
+    border: 0px solid var(--thumb-background-color);
+    /*  slider progress trick  */
+    box-shadow: -399px 0 0 400px var(--thumb-background-color);
+}
+
+
+/* Thumb: Firefox */
+.slider::-moz-range-thumb {
+    height: 10.33333333333rem;
+    width: 0px;
+    background-color: var(--thumb-background-color);
+    background-color: transparent;
+    border: 0px solid var(--thumb-background-color);
+    /*  slider progress trick  */
+    box-shadow: -399px 0 0 400px var(--thumb-background-color);
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background-color: var(--track-hover-background-color);
+    box-shadow: -399px 0 0 400px var(--track-hover-background-color);
+    border: 0px solid var(--track-hover-background-color);
+}
+
+.slider::-moz-range-thumb:hover {
+    background-color: var(--track-hover-background-color);
+    box-shadow: -399px 0 0 400px var(--track-hover-background-color);
+    border: 0px solid var(--track-hover-background-color);
+}

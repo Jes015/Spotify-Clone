@@ -1,0 +1,10 @@
+.sideRightControls__volume-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 0.5rem;
+}
+
+.sideRightControls__volume-slider-container {
+    padding-bottom: 0.25rem;
+}
