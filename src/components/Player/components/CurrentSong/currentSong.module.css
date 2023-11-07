@@ -1,0 +1,27 @@
+.currentSong {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-inline-start: 0.5rem;
+}
+
+.currentSong__data-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5rem;
+}
+
+.currentSong__title {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.8125rem;
+}
+
+.currentSong__artist {
+    font-size: 0.6875rem;
+    font-weight: 500;
+}
+
+.currentSong__image {
+    border-radius: 0.25rem;
+}

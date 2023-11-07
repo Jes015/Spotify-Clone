@@ -7,6 +7,12 @@ const nextConfig = {
                 hostname: 'misc.scdn.co',
                 pathname: '/**',
                 port: ''
+            },
+            {
+                protocol: 'https',
+                hostname: 'i.scdn.co',
+                pathname: '/**',
+                port: ''
             }
         ]
     }

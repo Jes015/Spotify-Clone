@@ -23,6 +23,7 @@ html,
 
 .icon {
   width: 1.6rem;
+  overflow: hidden;
   aspect-ratio: 1/1;
 }
 

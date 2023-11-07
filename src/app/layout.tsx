@@ -1,5 +1,5 @@
 import { fitgreeFont } from '@/assets/fonts/fitgree'
-import { Navigation, UserLibrary } from '@/components'
+import { Navigation, Player, UserLibrary } from '@/components'
 import type { Metadata } from 'next'
 import './globals.css'
 import styles from './layout.module.css'
@@ -25,7 +25,9 @@ export default function RootLayout({
           <main style={{ gridArea: 'main' }}>
             {children}
           </main>
-          <footer style={{ gridArea: 'footer' }}>card</footer>
+          <footer style={{ gridArea: 'player'}}>
+            <Player />
+          </footer>
         </div>
       </body>
     </html>
