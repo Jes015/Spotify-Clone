@@ -1,18 +1,10 @@
-"use client"
-import { Modal } from "@/components/ui"
+import { AuthModal } from "./components"
 
 export default function Home() {
   return (
     <div>
       <div id='modal' />
-      <Modal
-        title="Holaaa"
-        description="Como vamos"
-        isOpen
-        onChange={() => {}}
-      >
-        lkasjdflkñs
-      </Modal>
+      <AuthModal />
     </div>
   )
 }
