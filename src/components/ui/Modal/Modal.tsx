@@ -1,4 +1,6 @@
 "use client"
+import { CloseIcon } from '@/assets/Icons'
+import { Button } from '@/components/ui'
 import * as Dialog from '@radix-ui/react-dialog'
 import styles from './modal.module.css'
 
@@ -10,7 +12,7 @@ interface Props {
     onChange: () => void
 }
 
-export const Modal: React.FC<Props> = ({ children, isOpen, onChange }) => {
+export const Modal: React.FC<Props> = ({ title, description, children, isOpen, onChange }) => {
     return (
         <Dialog.Root
             open={isOpen}
@@ -19,14 +21,25 @@ export const Modal: React.FC<Props> = ({ children, isOpen, onChange }) => {
         >
             <Dialog.Portal>
                 <Dialog.Overlay className={styles.modal__overlay} />
-                <Dialog.Content className={styles.modal__content}>
-                    hola
-                </Dialog.Content>
+                <div className={styles['modal__content-wrapper']}>
+                    <Dialog.Content className={styles.modal__content}>
+                        <header className={styles.modal__header}>
+                            <div className={styles['modal__title-container']}>
+                                <Dialog.Title className={styles.modal__title}>{title}</Dialog.Title>
+                                <Dialog.Description className={styles.modal__description}>{description}</Dialog.Description>
+                            </div>
+                            <Dialog.Close asChild>
+                                <Button rounded>
+                                    <CloseIcon className='icon--md' />
+                                </Button>
+                            </Dialog.Close>
+                        </header>
+                        <div className={styles['model__main-container']}>
+                            {children}
+                        </div>
+                    </Dialog.Content>
+                </div>
             </Dialog.Portal>
-            <div>
-                {children}
-            </div>
-
         </Dialog.Root>
     )
 }
