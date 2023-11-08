@@ -1,5 +1,6 @@
 import { fitgreeFont } from '@/assets/fonts/fitgree'
 import { Navigation, Player, UserLibrary } from '@/components'
+import { SupabaseProvider, UserProvider } from '@/utils/providers'
 import type { Metadata } from 'next'
 import './globals.css'
 import styles from './layout.module.css'
@@ -17,18 +18,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fitgreeFont.className}>
-        <div
-          className={styles.layout}
-        >
-          <Navigation />
-          <UserLibrary />
-          <main style={{ gridArea: 'main' }}>
-            {children}
-          </main>
-          <footer style={{ gridArea: 'player'}}>
-            <Player />
-          </footer>
-        </div>
+        <SupabaseProvider>
+          <UserProvider>
+            <div
+              className={styles.layout}
+            >
+              <Navigation />
+              <UserLibrary />
+              <main style={{ gridArea: 'main' }}>
+                {children}
+              </main>
+              <footer style={{ gridArea: 'player' }}>
+                <Player />
+              </footer>
+            </div>
+          </UserProvider>
+        </SupabaseProvider>
       </body>
     </html>
   )
