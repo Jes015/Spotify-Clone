@@ -16,14 +16,14 @@
 
 /* Track: webkit browsers */
 .slider::-webkit-slider-runnable-track {
-    height: 0.33333333333rem;
+    height: 0.3rem;
     background: var(--track-background-color);
     border-radius: 16px;
 }
 
 /* Track: Mozilla Firefox */
 .slider::-moz-range-track {
-    height: 0.33333333333rem;
+    height: 0.3rem;
     background: var(--track-background-color);
     border-radius: 16px;
 }
