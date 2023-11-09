@@ -1,6 +1,6 @@
-import { ModalTypes } from "@/app/(home)/components/AuthModal/models"
-import { authModalStateService } from "@/app/(home)/components/AuthModal/services"
 import { Button } from "@/components"
+import { ModalTypes } from "@/components/AuthModal/models"
+import { authModalStateService } from "@/components/AuthModal/services"
 import styles from './authButtons.module.css'
 
 export const AuthButtons = () => {

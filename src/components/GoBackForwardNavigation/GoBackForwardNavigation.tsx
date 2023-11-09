@@ -1,10 +1,10 @@
 import { NextLineIcon, PreviousLineIcon } from '@/assets/Icons'
 import { Button } from '@/components'
+import { useRouting } from '@/hooks'
 import styles from './goBackForwardNavigation.module.css'
-import { useGoBackForwardNavigation } from './hooks'
 
 export const GoBackForwardNavigation = () => {
-  const { goBack, goForward } = useGoBackForwardNavigation()
+  const { goBack, goForward } = useRouting()
 
   const handleOnClickGoBack = () => {
     goBack()

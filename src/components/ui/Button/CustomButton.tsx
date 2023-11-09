@@ -5,9 +5,10 @@ interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
     rounded?: '100' | 'medium'
     variant?: 'default' | 'solid'
     color?: 'dark'
+    size2?: 'md' | 'xl'
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, variant = 'default', color, className, rounded = false, onClick, ...props }) => {
+export const Button: React.FC<ButtonProps> = ({ children, variant = 'default', color, size2 = 'xl', className, rounded = false, onClick, ...props }) => {
 
     return (
         <button
@@ -21,7 +22,8 @@ export const Button: React.FC<ButtonProps> = ({ children, variant = 'default', c
                     rounded === '100' ? styles['button--rounded-100'] : '',
                     rounded === 'medium' ? styles['button--rounded-medium'] : '',
                     color === 'dark' ? styles['button--dark']: '',
-                    props.disabled === true ? styles['button--disabled'] : ''
+                    props.disabled === true ? styles['button--disabled'] : '',
+                    size2 == 'md' ? styles['button--md'] : ''
                 ].join(' ')
             }
             {...{ props }}

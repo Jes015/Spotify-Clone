@@ -22,6 +22,8 @@ export const useLocalUser = (): DefaultUserContext => {
         .in('status', ['trialing', 'active'])
         .single()
 
+        console.log(user)
+
     useEffect(() => {
         if (user && !isLoadingData && !userDetails && !subscription) {
             setIsLoadingData(true)
@@ -49,5 +51,9 @@ export const useLocalUser = (): DefaultUserContext => {
         }
     }, [user, isLoadingUser])
 
-    return { accessToken, user, isLoading: isLoadingUser, subscription, userDetails }
+    const signOut = () => {
+        supabase.auth.signOut()
+    }
+
+    return { accessToken, user, isLoading: isLoadingUser, subscription, userDetails, signOut }
 }
