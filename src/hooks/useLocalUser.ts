@@ -2,6 +2,7 @@
 import { DefaultUserContext, Subscription, UserDetails } from "@/models"
 import { useSessionContext, useUser as useSupaUser } from "@supabase/auth-helpers-react"
 import { useEffect, useState } from "react"
+import { toast } from "sonner"
 
 export const useLocalUser = (): DefaultUserContext => {
     const {
@@ -22,7 +23,7 @@ export const useLocalUser = (): DefaultUserContext => {
         .in('status', ['trialing', 'active'])
         .single()
 
-        console.log(user)
+    console.log(user)
 
     useEffect(() => {
         if (user && !isLoadingData && !userDetails && !subscription) {
@@ -53,6 +54,12 @@ export const useLocalUser = (): DefaultUserContext => {
 
     const signOut = () => {
         supabase.auth.signOut()
+        .then(() => {
+            toast('Logged out')
+        })
+        .catch((error) => {
+            toast(error.message)
+        })
     }
 
     return { accessToken, user, isLoading: isLoadingUser, subscription, userDetails, signOut }
