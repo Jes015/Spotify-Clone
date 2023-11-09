@@ -1,13 +1,2 @@
 .home {}
 
-.home__header {
-    display: flex;
-    padding: 1rem;
-}
-
-.home__header-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4rem;
-}

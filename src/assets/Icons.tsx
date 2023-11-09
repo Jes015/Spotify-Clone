@@ -76,6 +76,21 @@ export const PreviousIcon: Icon = (props) => {
     )
 }
 
+export const PreviousLineIcon: Icon = (props) => {
+    return (
+        <svg
+            aria-hidden="true"
+            className="Svg-sc-ytk21e-0 kgVuXA IYDlXmBmmUKHveMzIPCF"
+            data-encore-id="icon"
+            viewBox="0 0 16 16"
+            fill="currentcolor"
+            {...props}
+        >
+            <path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z" />
+        </svg>
+    )
+}
+
 
 export const NextIcon: Icon = (props) => {
     return (
@@ -88,6 +103,20 @@ export const NextIcon: Icon = (props) => {
             {...props}
         >
             <path d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z" />
+        </svg>
+    )
+}
+export const NextLineIcon: Icon = (props) => {
+    return (
+        <svg
+            aria-hidden="true"
+            className="Svg-sc-ytk21e-0 kgVuXA IYDlXmBmmUKHveMzIPCF"
+            data-encore-id="icon"
+            viewBox="0 0 16 16"
+            fill="currentcolor"
+            {...props}
+        >
+            <path d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z" />
         </svg>
     )
 }
