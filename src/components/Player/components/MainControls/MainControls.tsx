@@ -6,13 +6,13 @@ export const MainControls = () => {
     return (
         <div className={styles.mainControls}>
             <div className={styles.mainControls__controls}>
-                <Button rounded>
+                <Button rounded='100'>
                     <PreviousIcon className='icon--md' />
                 </Button>
-                <Button variant='solid' rounded>
+                <Button variant='solid' rounded='100'>
                     <PauseIcon className='icon--md' />
                 </Button>
-                <Button rounded>
+                <Button rounded='100'>
                     <NextIcon className='icon--md' />
                 </Button>
             </div>

@@ -1,4 +1,4 @@
-export * from './Button/Button'
+export * from './Button/CustomButton'
 export * from './Modal/Modal'
 export * from './Slider/Slider'
 

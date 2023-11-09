@@ -12,7 +12,7 @@ export const UserLibrary = () => {
                     <h2>Your library</h2>
                 </div>
                 <div className={styles['userLibrary__actions-container']}>
-                    <Button rounded>
+                    <Button rounded='100'>
                         <PlusIcon className="icon--md" />
                     </Button>
                 </div>
