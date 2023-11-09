@@ -1,10 +1,10 @@
-import { LibraryIcon, PlusIcon } from "@/assets/Icons"
-import { Button } from "@/components"
-import { LibraryItem } from "./components/LibraryItem/LibraryItem"
+import { LibraryIcon, PlusIcon } from '@/assets/Icons'
+import { Button } from '@/components'
+import { LibraryItem } from './components/LibraryItem/LibraryItem'
 import styles from './userLibrary.module.css'
 
 export const UserLibrary = () => {
-    return (
+  return (
         <aside className={styles.userLibrary}>
             <header className={styles.userLibrary__header}>
                 <div className={styles['userLibrary__title-container']}>
@@ -29,5 +29,5 @@ export const UserLibrary = () => {
                 </ul>
             </div>
         </aside>
-    )
+  )
 }

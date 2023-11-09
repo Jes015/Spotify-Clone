@@ -1,17 +1,17 @@
-import { Button } from "@/components"
-import { ModalTypes } from "@/components/AuthModal/models"
-import { authModalStateService } from "@/components/AuthModal/services"
+import { Button } from '@/components'
+import { ModalTypes } from '@/components/AuthModal/models'
+import { authModalStateService } from '@/components/AuthModal/services'
 import styles from './authButtons.module.css'
 
 export const AuthButtons = () => {
-    const handleOnClickForOpenSignInModal = () => {
-        authModalStateService.sendMessage({ detail: ModalTypes.sign_in })
-    }
+  const handleOnClickForOpenSignInModal = () => {
+    authModalStateService.sendMessage({ detail: ModalTypes.sign_in })
+  }
 
-    const handleOnClickForOpenSignUpModal = () => {
-        authModalStateService.sendMessage({ detail: ModalTypes.sign_up })
-    }
-    return (
+  const handleOnClickForOpenSignUpModal = () => {
+    authModalStateService.sendMessage({ detail: ModalTypes.sign_up })
+  }
+  return (
         <div className={styles.authButtons}>
             <Button
                 rounded="medium"
@@ -27,5 +27,5 @@ export const AuthButtons = () => {
                 Sign in
             </Button>
         </div>
-    )
+  )
 }

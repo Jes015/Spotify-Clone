@@ -1,3 +1,13 @@
 {
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      "extends": "standard-with-typescript",
+      "rules": {
+        "eol-last":"off",
+        "@typescript-eslint/explicit-function-return-type": "off"
+      }
+    }
+  ],
   "extends": "next/core-web-vitals"
 }

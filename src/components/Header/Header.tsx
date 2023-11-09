@@ -3,22 +3,20 @@ import { useGlobalUser } from '@/hooks'
 import styles from './header.module.css'
 
 export const Header = () => {
-    const { user } = useGlobalUser()
-    return (
+  const { user } = useGlobalUser()
+  return (
         <header className={styles.header}>
             <GoBackForwardNavigation />
             {
-                user
-                    ?
-                    (
+                user != null
+                  ? (
                         <UserButtons />
                     )
-                    :
-                    (
+                  : (
 
                         <AuthButtons />
                     )
             }
         </header>
-    )
+  )
 }

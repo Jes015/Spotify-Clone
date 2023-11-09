@@ -1,22 +1,20 @@
-"use client"
-import { Modal } from "@/components"
-import { useGlobalSupabaseClient } from "@/hooks"
+'use client'
+import { Modal } from '@/components'
+import { useGlobalSupabaseClient } from '@/hooks'
 import { Auth } from '@supabase/auth-ui-react'
-import {
-    ThemeSupa
-} from '@supabase/auth-ui-shared'
-import { useAuthModal } from "./hooks"
+import { ThemeSupa } from '@supabase/auth-ui-shared'
+import { useAuthModal } from './hooks'
 
 export const AuthModal = () => {
-    const { isModalOpen, toggleModalOpen, view } = useAuthModal()
+  const { isModalOpen, toggleModalOpen, view } = useAuthModal()
 
-    const supabaseClient = useGlobalSupabaseClient()
+  const supabaseClient = useGlobalSupabaseClient()
 
-    const handleOnChangeOpenModal = () => {
-        toggleModalOpen()
-    }
+  const handleOnChangeOpenModal = () => {
+    toggleModalOpen()
+  }
 
-    return (
+  return (
         <Modal
             title="Auth"
             description="Sign in for the best experience"
@@ -33,5 +31,5 @@ export const AuthModal = () => {
             />
 
         </Modal>
-    )
+  )
 }

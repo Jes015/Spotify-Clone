@@ -1,11 +1,11 @@
-import { Metadata } from "next"
+import { type Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Spotify Clone',
-  description: 'Listen to your favorite songs <3',
+  description: 'Listen to your favorite songs <3'
 }
 
-export default function Home() {
+export default function Home () {
   return (
     <div>
       holaaa
