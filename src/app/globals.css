@@ -32,3 +32,9 @@ html,
   overflow: hidden;
   aspect-ratio: 1/1;
 }
+
+.icon--xl {
+  width: 1.2rem;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}

@@ -1,15 +1,9 @@
+"use client"
 import { fitgreeFont } from '@/assets/fonts/fitgree'
-import { Navigation, Player, UserLibrary } from '@/components'
+import { AuthModal, Header, Navigation, Player, UserLibrary } from '@/components'
 import { SupabaseProvider, UserProvider } from '@/utils/providers'
-import type { Metadata } from 'next'
-import { AuthModal } from './(home)/components'
 import './globals.css'
 import styles from './layout.module.css'
-
-export const metadata: Metadata = {
-  title: 'Spotify Clone',
-  description: 'Listen to your favorite songs <3',
-}
 
 export default function RootLayout({
   children,
@@ -27,6 +21,7 @@ export default function RootLayout({
               <Navigation />
               <UserLibrary />
               <main style={{ gridArea: 'main' }}>
+                <Header />
                 {children}
               </main>
               <footer style={{ gridArea: 'player' }}>

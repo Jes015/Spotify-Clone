@@ -4,7 +4,8 @@ const getFrontRoutes = () => {
     }
     const staticRoutes = {
         home: '/',
-        search: baseRoutes.search
+        search: baseRoutes.search,
+        profile: '/profile'
     }
 
     const dynamicRoutes = {

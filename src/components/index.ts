@@ -1,5 +1,10 @@
+export * from './AuthButtons/AuthButtons'
+export * from './AuthModal/AuthModal'
+export * from './GoBackForwardNavigation/GoBackForwardNavigation'
+export * from './Header/Header'
 export * from './Navigation/Navigation'
 export * from './Player/Player'
+export * from './UserButtons/UserButtons'
 export * from './UserLibrary/UserLibrary'
 export * from './ui/'
 

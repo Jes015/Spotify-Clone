@@ -9,7 +9,7 @@
     --button-color: var(--bg-primary);
     --button-background-color: var(--text-primary);
     --button-color-hover: var(--bg-primary);
-    --button-background-color-hover: var(--text-primary);
+    --button-background-color-hover: rgb(215, 215, 215);
 }
 
 .button--default {
@@ -36,6 +36,11 @@
 
 .button--disabled {
     opacity: 0.4;
+}
+
+.button--md {
+    font-size: 1rem;
+    line-height: 1rem;
 }
 
 .button:hover {
