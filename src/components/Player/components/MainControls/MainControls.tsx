@@ -3,7 +3,7 @@ import { Button, Slider } from '@/components'
 import styles from './mainControls.module.css'
 
 export const MainControls = () => {
-    return (
+  return (
         <div className={styles.mainControls}>
             <div className={styles.mainControls__controls}>
                 <Button rounded='100'>
@@ -26,5 +26,5 @@ export const MainControls = () => {
                 </span>
             </div>
         </div>
-    )
+  )
 }

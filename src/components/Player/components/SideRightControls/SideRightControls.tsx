@@ -1,9 +1,9 @@
-import { VolumeMaxIcon } from "@/assets/Icons"
-import { Slider } from "@/components"
+import { VolumeMaxIcon } from '@/assets/Icons'
+import { Slider } from '@/components'
 import styles from './sideRightControls.module.css'
 
 export const SideRightControls = () => {
-    return (
+  return (
         <div>
             <div className={styles['sideRightControls__volume-container']}>
                 <VolumeMaxIcon className="icon--md" />
@@ -12,5 +12,5 @@ export const SideRightControls = () => {
                 </div>
             </div>
         </div>
-    )
+  )
 }

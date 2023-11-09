@@ -1,7 +1,7 @@
-import { UserIcon } from "@/assets/Icons"
-import { Button } from "@/components"
-import { useGlobalUser, useRouting } from "@/hooks"
-import { frontRoutes } from "@/models"
+import { UserIcon } from '@/assets/Icons'
+import { Button } from '@/components'
+import { useGlobalUser, useRouting } from '@/hooks'
+import { frontRoutes } from '@/models'
 import styles from './userButtons.module.css'
 
 export const UserButtons = () => {

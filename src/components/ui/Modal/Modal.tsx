@@ -1,24 +1,23 @@
-"use client"
+'use client'
 import { CloseIcon } from '@/assets/Icons'
 import { Button } from '@/components/ui'
 import * as Dialog from '@radix-ui/react-dialog'
 import styles from './modal.module.css'
 
 interface Props {
-    children: React.ReactNode
-    isOpen: boolean
-    title: string
-    description: string
-    onChange: () => void
+  children: React.ReactNode
+  isOpen: boolean
+  title: string
+  description: string
+  onChange: () => void
 }
 
 export const Modal: React.FC<Props> = ({ title, description, children, isOpen, onChange }) => {
+  const handleOnChange = () => {
+    onChange()
+  }
 
-    const handleOnChange = () => {
-        onChange()
-    }
-
-    return (
+  return (
         <Dialog.Root
             open={isOpen}
             defaultOpen={isOpen}
@@ -46,7 +45,7 @@ export const Modal: React.FC<Props> = ({ title, description, children, isOpen, o
                 </div>
             </Dialog.Portal>
         </Dialog.Root>
-    )
+  )
 }
 
 export default Modal

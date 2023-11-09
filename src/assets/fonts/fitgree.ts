@@ -1,3 +1,3 @@
-import { Figtree } from "next/font/google"
+import { Figtree } from 'next/font/google'
 
 export const fitgreeFont = Figtree({ subsets: ['latin'] })

@@ -1,8 +1,8 @@
-import Image from "next/image"
+import Image from 'next/image'
 import styles from './libraryItem.module.css'
 
 export const LibraryItem = () => {
-    return (
+  return (
         <div className={styles.libraryItem}>
             <Image
                 src='https://misc.scdn.co/liked-songs/liked-songs-640.png'
@@ -24,5 +24,5 @@ export const LibraryItem = () => {
                 </footer>
             </div>
         </div>
-    )
+  )
 }
