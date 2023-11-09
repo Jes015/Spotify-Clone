@@ -19,8 +19,12 @@
     --button-background-color-hover: var(--bg-card-hover);
 }
 
-.button--rounded {
+.button--rounded-100 {
     border-radius: 100%;
+}
+
+.button--rounded-medium {
+    border-radius: 3rem;
 }
 
 .button:hover {

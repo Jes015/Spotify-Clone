@@ -37,13 +37,13 @@
 
 .modal__title {
     color: var(--text-primary);
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     line-height: 1.8rem;
 }
 
 .modal__description {
-    font-size: 0.7rem;
-    line-height: 0.7rem;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
     font-weight: 500;
 }
 

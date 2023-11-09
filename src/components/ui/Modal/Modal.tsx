@@ -13,11 +13,16 @@ interface Props {
 }
 
 export const Modal: React.FC<Props> = ({ title, description, children, isOpen, onChange }) => {
+
+    const handleOnChange = () => {
+        onChange()
+    }
+
     return (
         <Dialog.Root
             open={isOpen}
             defaultOpen={isOpen}
-            onOpenChange={onChange}
+            onOpenChange={handleOnChange}
         >
             <Dialog.Portal>
                 <Dialog.Overlay className={styles.modal__overlay} />
@@ -29,7 +34,7 @@ export const Modal: React.FC<Props> = ({ title, description, children, isOpen, o
                                 <Dialog.Description className={styles.modal__description}>{description}</Dialog.Description>
                             </div>
                             <Dialog.Close asChild>
-                                <Button rounded>
+                                <Button rounded='100'>
                                     <CloseIcon className='icon--md' />
                                 </Button>
                             </Dialog.Close>

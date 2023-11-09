@@ -2,6 +2,7 @@ import { fitgreeFont } from '@/assets/fonts/fitgree'
 import { Navigation, Player, UserLibrary } from '@/components'
 import { SupabaseProvider, UserProvider } from '@/utils/providers'
 import type { Metadata } from 'next'
+import { AuthModal } from './(home)/components'
 import './globals.css'
 import styles from './layout.module.css'
 
@@ -32,6 +33,7 @@ export default function RootLayout({
                 <Player />
               </footer>
             </div>
+            <AuthModal />
           </UserProvider>
         </SupabaseProvider>
       </body>
