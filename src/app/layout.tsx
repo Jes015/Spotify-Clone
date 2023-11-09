@@ -2,6 +2,7 @@
 import { fitgreeFont } from '@/assets/fonts/fitgree'
 import { AuthModal, Header, Navigation, Player, UserLibrary } from '@/components'
 import { SupabaseProvider, UserProvider } from '@/utils/providers'
+import { Toaster } from 'sonner'
 import './globals.css'
 import styles from './layout.module.css'
 
@@ -29,6 +30,7 @@ export default function RootLayout({
               </footer>
             </div>
             <AuthModal />
+            <Toaster />
           </UserProvider>
         </SupabaseProvider>
       </body>
