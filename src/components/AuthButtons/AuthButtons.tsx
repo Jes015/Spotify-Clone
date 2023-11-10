@@ -15,6 +15,7 @@ export const AuthButtons = () => {
         <div className={styles.authButtons}>
             <Button
                 rounded="medium"
+                size2='md'
                 onClick={handleOnClickForOpenSignUpModal}
             >
                 Sign up
@@ -22,6 +23,7 @@ export const AuthButtons = () => {
             <Button
                 rounded="medium"
                 variant="solid"
+                size2='md'
                 onClick={handleOnClickForOpenSignInModal}
             >
                 Sign in
