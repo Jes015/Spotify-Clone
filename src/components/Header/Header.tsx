@@ -1,4 +1,4 @@
-import { AuthButtons, GoBackForwardNavigation, UserButtons } from '@/components'
+import { AuthButtons, DropdownMenuUser, GoBackForwardNavigation } from '@/components'
 import { useGlobalUser } from '@/hooks'
 import styles from './header.module.css'
 
@@ -10,7 +10,7 @@ export const Header = () => {
             {
                 user != null
                   ? (
-                        <UserButtons />
+                        <DropdownMenuUser />
                     )
                   : (
 

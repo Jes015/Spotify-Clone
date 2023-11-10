@@ -7,9 +7,14 @@
   --bg-card: #121212;
   --bg-card-hover: #ffffff12;
   --bg-card-hover-2: #1a1a1a;
+  --bg-popover: #282828;
+  --bg-separator: rgb(179, 179, 179);
+  --border-primary:0.1rem #ffffff12 solid;
   --text-primary: rgb(255, 255, 255);
   --text-secondary: rgb(179, 179, 179);
+  --text-tertiary: rgba(255, 255, 255, 0.9);
   --text-error: rgb(210 123 123);
+
 }
 
 body,
@@ -28,6 +33,12 @@ html,
   aspect-ratio: 1/1;
 }
 
+.icon--sm {
+  width: 0.8rem;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+
 .icon--md {
   width: 1rem;
   overflow: hidden;
@@ -36,6 +47,12 @@ html,
 
 .icon--xl {
   width: 1.2rem;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+
+.icon--base {
+  width: 1rem;
   overflow: hidden;
   aspect-ratio: 1/1;
 }
