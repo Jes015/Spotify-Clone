@@ -1,4 +1,5 @@
 'use client'
+import { globalLoaderStateService } from '@/components/GlobalLoader/services'
 import { type DefaultUserContext, type Subscription, type UserDetails } from '@/models'
 import { toastUtils } from '@/utils/others'
 import { useSessionContext, useUser as useSupaUser } from '@supabase/auth-helpers-react'
@@ -51,12 +52,16 @@ export const useLocalUser = (): DefaultUserContext => {
   }, [user, isLoadingUser])
 
   const signOut = () => {
+    globalLoaderStateService.sendMessage()
     supabase.auth.signOut()
       .then(() => {
         toastUtils.success('Logged out')
       })
       .catch((error) => {
         toastUtils.error(error.message)
+      })
+      .finally(() => {
+        globalLoaderStateService.sendMessage()
       })
   }
 

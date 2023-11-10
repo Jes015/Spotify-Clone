@@ -1,6 +1,10 @@
 'use client'
 import { Button, TextField } from '@/components'
+import { globalLoaderStateService } from '@/components/GlobalLoader/services'
+import { useSongMethods } from '@/components/LibraryModal/hooks'
 import { libraryModalFormSchema, type libraryModalFormSchemaType } from '@/components/LibraryModal/models'
+import { useRouting } from '@/hooks'
+import { toastUtils } from '@/utils/others'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, type SubmitHandler } from 'react-hook-form'
 import styles from './libraryModalForm.module.css'
@@ -14,8 +18,20 @@ export const LibraryModalForm = () => {
     resolver: zodResolver(libraryModalFormSchema)
   })
 
-  const handleOnClickForSubmit: SubmitHandler<libraryModalFormSchemaType> = (data) => {
-    console.log(data)
+  const { refresh } = useRouting()
+  const { addSong } = useSongMethods()
+
+  const handleOnClickForSubmit: SubmitHandler<libraryModalFormSchemaType> = async (data) => {
+    try {
+      globalLoaderStateService.sendMessage()
+      await addSong(data.title, data.author, data.image[0], data.song[0])
+      toastUtils.success('Song added')
+      refresh()
+    } catch (error) {
+      toastUtils.error(`Something went wrong : ${error as string}`)
+    } finally {
+      globalLoaderStateService.sendMessage()
+    }
   }
 
   return (
@@ -53,6 +69,7 @@ export const LibraryModalForm = () => {
                 className={styles.libraryModalForm__button}
                 variant='solid'
                 rounded='medium'
+                disabled={formState.isSubmitting}
             >
                 Send
             </Button>

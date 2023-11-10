@@ -16,7 +16,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--text-primary);
+    background-color: var(--text-secondary);
     animation: lineLoading ease 2s infinite;
 }
 
@@ -27,6 +27,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    transform: translateX(-120%);
     background-color: var(--text-secondary);
     animation: lineLoading ease 2s infinite;
     animation-delay: 1s;
