@@ -1,0 +1,31 @@
+.input {
+    letter-spacing: 0px;
+    transition-property: background-color, border;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 100ms;
+    background: #1e1e1e;
+    border-radius: 0.25rem;
+    padding: 0.625rem 0.9375rem;
+    cursor: text;
+    border-width: 0.0625rem;
+    border-color: #3e3e3e;
+    border-style: solid;
+    font-size: 0.875rem;
+    width: 100%;
+    color: #ffffff;
+    box-sizing: border-box;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    outline: none;
+}
+
+.input:focus, .input:hover {
+    border-color: #808080;
+}
+
+.input[type='file'] {
+    font-size: 0.85rem;
+}

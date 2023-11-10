@@ -1,6 +1,6 @@
-export const ModalTypes = {
+export const AuthModalTypes = {
   sign_in: 'sign_in',
   sign_up: 'sign_up'
 } as const
 
-export type ModalType = typeof ModalTypes[keyof typeof ModalTypes]
+export type ModalType = typeof AuthModalTypes[keyof typeof AuthModalTypes]

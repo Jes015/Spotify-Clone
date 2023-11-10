@@ -5,7 +5,8 @@
       "extends": "standard-with-typescript",
       "rules": {
         "eol-last":"off",
-        "@typescript-eslint/explicit-function-return-type": "off"
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-misused-promises": "off"
       }
     }
   ],

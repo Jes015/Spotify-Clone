@@ -1,8 +1,9 @@
 'use client'
+import { globalLoaderStateService } from '@/components/GlobalLoader/services'
 import { type DefaultUserContext, type Subscription, type UserDetails } from '@/models'
+import { toastUtils } from '@/utils/others'
 import { useSessionContext, useUser as useSupaUser } from '@supabase/auth-helpers-react'
 import { useEffect, useState } from 'react'
-import { toast } from 'sonner'
 
 export const useLocalUser = (): DefaultUserContext => {
   const {
@@ -22,8 +23,6 @@ export const useLocalUser = (): DefaultUserContext => {
     .select('*, prices(*, products(*))')
     .in('status', ['trialing', 'active'])
     .single()
-
-  console.log(user)
 
   useEffect(() => {
     if (user != null && !isLoadingData && userDetails == null && subscription == null) {
@@ -53,12 +52,16 @@ export const useLocalUser = (): DefaultUserContext => {
   }, [user, isLoadingUser])
 
   const signOut = () => {
+    globalLoaderStateService.sendMessage()
     supabase.auth.signOut()
       .then(() => {
-        toast('Logged out')
+        toastUtils.success('Logged out')
       })
       .catch((error) => {
-        toast(error.message)
+        toastUtils.error(error.message)
+      })
+      .finally(() => {
+        globalLoaderStateService.sendMessage()
       })
   }
 

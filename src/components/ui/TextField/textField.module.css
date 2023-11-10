@@ -1,0 +1,20 @@
+.textField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.textField__label {
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+}
+
+.textField__error {
+    display: inline-block;
+    min-height: 0.9rem;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    color: var(--text-error);
+    font-weight: 500;
+}

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.2",
     "@radix-ui/react-dialog": "^1.0.5",
     "@supabase/auth-helpers-nextjs": "^0.8.7",
     "@supabase/auth-helpers-react": "^0.4.2",
@@ -17,8 +18,10 @@
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.48.2",
     "sonner": "^1.2.0",
-    "stripe": "^14.3.0"
+    "stripe": "^14.3.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20",

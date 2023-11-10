@@ -9,6 +9,7 @@
   --bg-card-hover-2: #1a1a1a;
   --text-primary: rgb(255, 255, 255);
   --text-secondary: rgb(179, 179, 179);
+  --text-error: rgb(210 123 123);
 }
 
 body,

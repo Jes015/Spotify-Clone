@@ -1,12 +1,12 @@
 'use client'
-import { ModalTypes, type ModalType } from '@/components/AuthModal/models'
+import { AuthModalTypes, type ModalType } from '@/components/AuthModal/models'
 import { authModalStateService } from '@/components/AuthModal/services'
 import { useGlobalUser } from '@/hooks'
 import { useEffect, useState } from 'react'
 
 const defaultValues = {
   modalOpen: false,
-  view: ModalTypes.sign_in
+  view: AuthModalTypes.sign_in
 }
 
 export const useAuthModal = () => {
@@ -23,7 +23,8 @@ export const useAuthModal = () => {
 
   useEffect(() => {
     authModalStateService.listenEvent((data) => {
-      if (data != null && 'detail' in data && (data.detail === ModalTypes.sign_in || data.detail === ModalTypes.sign_up)) {
+      // @ts-expect-error should verify that data has detail key
+      if (data != null && 'detail' in data && (data.detail === AuthModalTypes.sign_in || data.detail === AuthModalTypes.sign_up)) {
         setView(data.detail)
       }
       toggleModalOpen()
