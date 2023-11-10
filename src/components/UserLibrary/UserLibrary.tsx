@@ -1,9 +1,15 @@
 import { LibraryIcon, PlusIcon } from '@/assets/Icons'
 import { Button } from '@/components'
-import { LibraryItem } from './components/LibraryItem/LibraryItem'
+import { LibraryItem } from './components/'
+import { useUserLibrary } from './hooks'
 import styles from './userLibrary.module.css'
 
 export const UserLibrary = () => {
+  const { openLibraryModal } = useUserLibrary()
+
+  const handleOnClickForOpenLibrary = () => {
+    openLibraryModal()
+  }
   return (
         <aside className={styles.userLibrary}>
             <header className={styles.userLibrary__header}>
@@ -12,7 +18,10 @@ export const UserLibrary = () => {
                     <h2>Your library</h2>
                 </div>
                 <div className={styles['userLibrary__actions-container']}>
-                    <Button rounded='100'>
+                    <Button
+                        rounded='100'
+                        onClick={handleOnClickForOpenLibrary}
+                    >
                         <PlusIcon className="icon--md" />
                     </Button>
                 </div>

@@ -1,0 +1,9 @@
+.libraryModalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.libraryModalForm__button {
+    margin-top: 0.7rem;
+}

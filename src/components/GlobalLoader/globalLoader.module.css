@@ -1,0 +1,9 @@
+.globalLoader {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 800;
+    height: 1rem;
+    background-color: rebeccapurple;
+}
