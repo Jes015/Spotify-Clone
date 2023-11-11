@@ -1,9 +1,8 @@
 'use client'
 import { Button, TextField } from '@/components'
 import { globalLoaderStateService } from '@/components/GlobalLoader/services'
-import { useSongMethods } from '@/components/LibraryModal/hooks'
 import { libraryModalFormSchema, type libraryModalFormSchemaType } from '@/components/LibraryModal/models'
-import { useRouting } from '@/hooks'
+import { useRouting, useSongMethods } from '@/hooks'
 import { toastUtils } from '@/utils/others'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, type SubmitHandler } from 'react-hook-form'
@@ -69,6 +68,7 @@ export const LibraryModalForm = () => {
                 className={styles.libraryModalForm__button}
                 variant='solid'
                 rounded='medium'
+                color='green'
                 disabled={formState.isSubmitting}
             >
                 Send

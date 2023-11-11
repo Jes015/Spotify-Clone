@@ -1,7 +1,7 @@
 'use client'
 import { CloseIcon } from '@/assets/Icons'
 import { Button } from '@/components/ui'
-import * as Dialog from '@radix-ui/react-dialog'
+import { Close, Content, Description, Overlay, Portal, Root, Title } from '@radix-ui/react-dialog'
 import styles from './modal.module.css'
 
 interface Props {
@@ -18,33 +18,33 @@ export const Modal: React.FC<Props> = ({ title, description, children, isOpen, o
   }
 
   return (
-        <Dialog.Root
+        <Root
             open={isOpen}
             defaultOpen={isOpen}
             onOpenChange={handleOnChange}
         >
-            <Dialog.Portal>
-                <Dialog.Overlay className={styles.modal__overlay} />
+            <Portal>
+                <Overlay className={styles.modal__overlay} />
                 <div className={styles['modal__content-wrapper']}>
-                    <Dialog.Content className={styles.modal__content}>
+                    <Content className={styles.modal__content}>
                         <header className={styles.modal__header}>
                             <div className={styles['modal__title-container']}>
-                                <Dialog.Title className={styles.modal__title}>{title}</Dialog.Title>
-                                <Dialog.Description className={styles.modal__description}>{description}</Dialog.Description>
+                                <Title className={styles.modal__title}>{title}</Title>
+                                <Description className={styles.modal__description}>{description}</Description>
                             </div>
-                            <Dialog.Close asChild>
+                            <Close asChild>
                                 <Button rounded='100'>
                                     <CloseIcon className='icon--md' />
                                 </Button>
-                            </Dialog.Close>
+                            </Close>
                         </header>
                         <div className={styles['model__main-container']}>
                             {children}
                         </div>
-                    </Dialog.Content>
+                    </Content>
                 </div>
-            </Dialog.Portal>
-        </Dialog.Root>
+            </Portal>
+        </Root>
   )
 }
 

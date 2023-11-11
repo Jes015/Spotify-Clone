@@ -1,3 +1,4 @@
+'use client'
 import { LinkIcon, UserIcon } from '@/assets/Icons'
 import { DropdownMenu } from '@/components'
 import { useGlobalUser, useRouting } from '@/hooks'

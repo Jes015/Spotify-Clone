@@ -5,6 +5,8 @@
 :root {
   --bg-primary: black;
   --bg-card: #121212;
+  --bg-card-2: rgb(24, 24, 24);
+  --bg-card-2-hover: rgb(40, 40, 40);
   --bg-card-hover: #ffffff12;
   --bg-card-hover-2: #1a1a1a;
   --bg-popover: #282828;
@@ -27,8 +29,22 @@ html,
   font-weight: bold;
 }
 
+img {
+  font-style: italic;
+  font-weight: 400;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 0.2rem;
+}
+
 .icon {
   width: 1.6rem;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+
+.icon--base {
+  width: 1rem;
   overflow: hidden;
   aspect-ratio: 1/1;
 }
@@ -51,8 +67,9 @@ html,
   aspect-ratio: 1/1;
 }
 
-.icon--base {
-  width: 1rem;
+.icon--2xl {
+  width: 1.5rem;
   overflow: hidden;
   aspect-ratio: 1/1;
 }
+

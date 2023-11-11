@@ -13,6 +13,12 @@ const nextConfig = {
                 hostname: 'i.scdn.co',
                 pathname: '/**',
                 port: ''
+            },
+            {
+                protocol: 'https',
+                hostname: 'lyokqzisvfvpanwfolvs.supabase.co',
+                pathname: '/**',
+                port: ''
             }
         ]
     }
