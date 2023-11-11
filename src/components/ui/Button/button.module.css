@@ -34,6 +34,13 @@
     --button-background-color-hover: rgba(0, 0, 0, 0.7);
 }
 
+.button--green {
+    --button-color: #000;
+    --button-background-color: #1ed760;
+    --button-color-hover: #000;
+    --button-background-color-hover: #1fdf64;
+}
+
 .button--disabled {
     opacity: 0.4;
 }

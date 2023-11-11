@@ -5,7 +5,7 @@ import styles from './button.module.css'
 interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   rounded?: '100' | 'medium'
   variant?: 'default' | 'solid'
-  color?: 'dark'
+  color?: 'dark' | 'green'
   size2?: 'md' | 'xl'
 }
 
@@ -24,6 +24,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             rounded === '100' ? styles['button--rounded-100'] : '',
             rounded === 'medium' ? styles['button--rounded-medium'] : '',
             color === 'dark' ? styles['button--dark'] : '',
+            color === 'green' ? styles['button--green'] : '',
             props.disabled === true ? styles['button--disabled'] : '',
             size2 === 'md' ? styles['button--md'] : ''
           ].join(' ')

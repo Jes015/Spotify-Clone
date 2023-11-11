@@ -1,0 +1,68 @@
+.song {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    background-color: var(--bg-card-2);
+    padding: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.song__header {
+    overflow: hidden;
+}
+
+.song__image {
+    object-fit: cover;
+    width: 100%;
+    height: 9.625rem;
+    aspect-ratio: 1/1;
+    filter: blur(8px);
+}
+
+.song__title {
+    color: var(--text-primary);
+}
+
+.song__author {
+    font-size: 0.8rem;
+}
+
+.song__footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.song__play-button-container {
+    position: absolute;
+    bottom: 0rem;
+    right: 1.2rem;
+    filter: drop-shadow(0px 0px 10px black);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 20;
+}
+
+.song__play-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+}
+
+.song:hover {
+    background-color: var(--bg-card-2-hover);
+}
+
+.song__play-button:hover {
+    scale: 1.1;
+}
+
+.song:hover .song__play-button-container {
+    transform: translateY(-2.3rem);
+    opacity: 1;
+}

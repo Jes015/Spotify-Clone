@@ -5,6 +5,12 @@ import { SupabaseProvider, UserProvider } from '@/utils/providers'
 import './globals.css'
 import styles from './layout.module.css'
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1
+}
+
 export default function RootLayout ({
   children
 }: {

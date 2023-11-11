@@ -1,3 +1,4 @@
+'use client'
 import { Button } from '@/components'
 import { Content, Portal, Root, Trigger } from '@radix-ui/react-dropdown-menu'
 import { useState } from 'react'
