@@ -28,13 +28,33 @@ export const UserLibrary = () => {
             </header>
             <div className={styles.userLibrary__content}>
                 <ul>
-                    {
-                        Array(15).fill(null).map((_, index) => (
-                            <li key={index}>
-                                <LibraryItem />
-                            </li>
-                        ))
-                    }
+                    <li>
+                        <LibraryItem
+                            title='Liked songs'
+                            subTitle={
+                                <>
+                                    <span>Playlist</span>
+                                    •
+                                    <span>11 songs</span>
+                                </>
+                            }
+                            imageUrl='https://misc.scdn.co/liked-songs/liked-songs-640.png'
+                            imageAlt='liked song image'
+                        />
+                    </li>
+                    <li>
+                        <LibraryItem
+                            title='Bad Bunny'
+                            subTitle={
+                                <>
+                                    <span>Artist</span>
+                                </>
+                            }
+                            imageUrl='https://i.scdn.co/image/ab6761610000e5eb9ad50e478a469448c6f369df'
+                            imageAlt='liked song image'
+                            imageRadius='100%'
+                        />
+                    </li>
                 </ul>
             </div>
         </aside>
