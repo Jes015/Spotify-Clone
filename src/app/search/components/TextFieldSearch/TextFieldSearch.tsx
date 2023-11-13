@@ -11,7 +11,6 @@ export const TextFieldSearch: React.FC<Props> = ({ error }) => {
 
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.currentTarget.value
-
     changeInputValue(inputValue)
   }
 
@@ -21,7 +20,6 @@ export const TextFieldSearch: React.FC<Props> = ({ error }) => {
             error={error}
             onChange={handleOnChange}
             ref={inputRef as MutableRefObject<HTMLInputElement>}
-
         />
   )
 }
