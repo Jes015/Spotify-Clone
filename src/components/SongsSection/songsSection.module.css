@@ -1,0 +1,9 @@
+.songSection__title {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+}
+.songSection__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 185px));
+    gap: 1rem;
+}

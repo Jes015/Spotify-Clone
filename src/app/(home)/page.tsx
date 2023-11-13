@@ -1,6 +1,6 @@
+import { SongsSection } from '@/components/SongsSection/SongsSection'
 import { getAllSong } from '@/services/song_server.service'
 import { type Metadata } from 'next'
-import { LatestSongs } from './components'
 import styles from './home.module.css'
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default async function Home () {
     <div className={styles.home}>
       {
         songs.data != null
-          ? <LatestSongs songs={songs.data} />
+          ? <SongsSection title='Latest songs' songs={songs.data} />
           : <h3>No songs available</h3>
       }
 
