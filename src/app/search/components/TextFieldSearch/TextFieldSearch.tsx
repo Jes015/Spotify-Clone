@@ -17,8 +17,7 @@ export const TextFieldSearch: React.FC<Props> = ({ error }) => {
 
   return (
         <TextField
-            label="Search a song, artist, playlist..."
-            placeHolder="The weeknd"
+            placeHolder="The weeknd, Bad Bunny, J Oyola ..."
             error={error}
             onChange={handleOnChange}
             ref={inputRef as MutableRefObject<HTMLInputElement>}

@@ -1,3 +1,11 @@
 .searchPage {
-    padding: 1rem;
+    padding-inline: 1rem;
+}
+
+.searchPage__title {
+    font-size: 3rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    line-height: 3rem;
+    margin-bottom: 0.5rem;
 }
