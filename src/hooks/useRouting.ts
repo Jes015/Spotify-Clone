@@ -1,6 +1,7 @@
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 export const useRouting = () => {
+  const pathname = usePathname()
   const navigation = useRouter()
 
   const goTo = (url: string) => {
@@ -19,5 +20,5 @@ export const useRouting = () => {
     navigation.forward()
   }
 
-  return { goBack, goTo, refresh, goForward }
+  return { goBack, goTo, refresh, goForward, pathname }
 }

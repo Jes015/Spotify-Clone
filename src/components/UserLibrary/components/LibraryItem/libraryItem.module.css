@@ -7,6 +7,10 @@
     cursor: pointer;
 }
 
+.libraryItem--selected {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
 .libraryItem__image {
     border-radius: .25rem;
 }

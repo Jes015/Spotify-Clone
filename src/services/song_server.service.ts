@@ -43,3 +43,19 @@ export const getSongByTitle = async (title: string | undefined) => {
 
   return { data: songsData, error }
 }
+
+export const getLikedSongs = async () => {
+  const supabase = createServerComponentClient({ cookies })
+
+  const { data: { session } } = await supabase.auth.getSession()
+
+  const { data, error } = await supabase
+    .from('liked_songs')
+    .select('*, songs(*)')
+    .eq('user_id', session?.user.id)
+    .order('created_at', { ascending: false })
+
+  const dataAdapted: SongArray = data != null ? data?.map((item) => ({ ...item.songs })) : []
+
+  return { data: dataAdapted, error }
+}

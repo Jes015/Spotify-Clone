@@ -12,6 +12,13 @@
     height: 100%;
 }
 
+.layout__main {
+    position: relative;
+    padding-inline: 1rem;
+    overflow: auto;
+    grid-area: main;
+}
+
 .layout>*:not(footer) {
     background-color: var(--bg-card);
     border-radius: 0.5rem;

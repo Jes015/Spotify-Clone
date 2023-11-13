@@ -1,10 +1,15 @@
+'use client'
 import { LibraryIcon, PlusIcon } from '@/assets/Icons'
 import { Button } from '@/components'
+import { useRouting } from '@/hooks'
+import { frontRoutes } from '@/models'
+import Link from 'next/link'
 import { LibraryItem } from './components/'
 import { useUserLibrary } from './hooks'
 import styles from './userLibrary.module.css'
 
 export const UserLibrary = () => {
+  const { pathname } = useRouting()
   const { openLibraryModal } = useUserLibrary()
 
   const handleOnClickForOpenLibrary = () => {
@@ -29,18 +34,23 @@ export const UserLibrary = () => {
             <div className={styles.userLibrary__content}>
                 <ul>
                     <li>
-                        <LibraryItem
-                            title='Liked songs'
-                            subTitle={
-                                <>
-                                    <span>Playlist</span>
-                                    •
-                                    <span>11 songs</span>
-                                </>
-                            }
-                            imageUrl='https://misc.scdn.co/liked-songs/liked-songs-640.png'
-                            imageAlt='liked song image'
-                        />
+                        <Link
+                            href={frontRoutes.staticRoutes.likedSongs}
+                        >
+                            <LibraryItem
+                                title='Liked songs'
+                                subTitle={
+                                    <>
+                                        <span>Playlist</span>
+                                        •
+                                        <span>11 songs</span>
+                                    </>
+                                }
+                                imageUrl='https://misc.scdn.co/liked-songs/liked-songs-640.png'
+                                imageAlt='liked song image'
+                                selected={frontRoutes.staticRoutes.likedSongs === pathname}
+                            />
+                        </Link>
                     </li>
                     <li>
                         <LibraryItem
