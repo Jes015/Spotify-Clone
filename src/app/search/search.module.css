@@ -1,7 +1,3 @@
-.searchPage {
-    padding-inline: 1rem;
-}
-
 .searchPage__title {
     font-size: 3rem;
     color: var(--text-primary);

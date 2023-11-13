@@ -26,7 +26,7 @@ export default function RootLayout ({
             >
               <Navigation />
               <UserLibrary />
-              <main style={{ gridArea: 'main' }}>
+              <main className={styles.layout__main}>
                 <Header />
                 {children}
               </main>

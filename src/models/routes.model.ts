@@ -5,7 +5,8 @@ const getFrontRoutes = () => {
   const staticRoutes = {
     home: '/',
     search: baseRoutes.search,
-    profile: '/profile'
+    profile: '/profile',
+    likedSongs: '/liked-songs'
   }
 
   const dynamicRoutes = {

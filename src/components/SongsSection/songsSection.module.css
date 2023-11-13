@@ -1,7 +1,24 @@
+.songSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.songSection__header--playlist {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .songSection__title {
     font-size: 1.3rem;
     color: var(--text-primary);
 }
+
+.songSection__title--playlist {
+    font-size: 2rem;
+}
+
 .songSection__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 185px));

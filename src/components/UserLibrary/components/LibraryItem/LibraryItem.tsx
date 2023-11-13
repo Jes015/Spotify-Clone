@@ -7,10 +7,18 @@ interface Props {
   imageUrl: string
   imageAlt: string
   imageRadius?: string
+  selected?: boolean
 }
-export const LibraryItem: React.FC<Props> = ({ title, subTitle, imageAlt, imageUrl, imageRadius = '0.2rem' }) => {
+export const LibraryItem: React.FC<Props> = ({ title, subTitle, imageAlt, imageUrl, imageRadius = '0.2rem', selected = false }) => {
   return (
-        <div className={styles.libraryItem}>
+        <div
+            className={
+                [
+                  styles.libraryItem,
+                  selected ? styles['libraryItem--selected'] : ''
+                ].join(' ')
+            }
+        >
             <Image
                 src={imageUrl ?? 'https://misc.scdn.co/liked-songs/liked-songs-640.png'}
                 alt={imageAlt ?? 'liked song image'}

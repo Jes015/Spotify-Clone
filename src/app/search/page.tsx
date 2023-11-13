@@ -14,10 +14,10 @@ const SearchPage: React.FC<Props> = async ({ searchParams }) => {
   const songs = await getSongByTitle(searchParams.title)
 
   return (
-    <div className={styles.searchPage}>
+    <div>
       <h1 className={styles.searchPage__title}>Search</h1>
       <TextFieldSearch error={songs.error?.message ?? ''} />
-      <SongsSection title='Results' songs={songs.data as SongArray} />
+      <SongsSection type='base' title='Results' songs={songs.data as SongArray} />
     </div>
   )
 }
