@@ -28,7 +28,9 @@ export default function RootLayout ({
               <UserLibrary />
               <main className={styles.layout__main}>
                 <Header />
-                {children}
+                <div className={styles['layout__main-wrapper']}>
+                  {children}
+                </div>
               </main>
               <footer style={{ gridArea: 'player' }}>
                 <Player />
