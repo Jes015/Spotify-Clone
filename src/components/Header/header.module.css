@@ -2,7 +2,52 @@
     position: sticky;
     top: 0;
     display: flex;
-    padding-block: 1rem;
+    padding: 1rem;
     justify-content: space-between;
+    background: transparent;
+    overflow: hidden;
+    z-index: 400;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -20;
+    opacity: 0;
     background-color: var(--bg-card);
+    animation: convert-background linear forwards;
+    animation-duration: auto;
+    animation-timeline: --main-timeline;
+    animation-range: 1rem 12rem;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, var(--color-green) 100%);
+    animation: convert-background linear forwards;
+    animation-duration: auto;
+    animation-timeline: --main-timeline;
+    animation-range: 1rem 12rem;
+    z-index: -10;
+    filter: blur(60px);
+    opacity: 0;
+}
+
+@keyframes convert-background {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
