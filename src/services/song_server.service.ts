@@ -12,3 +12,34 @@ export const getAllSong = async () => {
 
   return { data: data as SongArray | null, error }
 }
+
+export const getSongByTitle = async (title: string | undefined) => {
+  const supabase = createServerComponentClient({ cookies })
+
+  let songsData: SongArray | null = null
+  let error = null
+
+  if (title == null) {
+    const allSongs = await getAllSong()
+
+    if (allSongs.error == null) {
+      songsData = allSongs.data
+    } else {
+      error = allSongs.error
+    }
+  } else {
+    const { data: songsByTitle, error: songsByTitleError } = await supabase
+      .from('songs')
+      .select('*')
+      .ilike('title', `%${title}%`)
+      .order('created_at', { ascending: false })
+
+    if (error == null) {
+      songsData = songsByTitle
+    } else {
+      error = songsByTitleError
+    }
+  }
+
+  return { data: songsData, error }
+}

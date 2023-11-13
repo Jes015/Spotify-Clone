@@ -1,5 +1,0 @@
-.latestSongs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 185px));
-    gap: 1rem;
-}
