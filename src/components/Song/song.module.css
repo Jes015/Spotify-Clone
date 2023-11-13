@@ -12,6 +12,7 @@
 }
 
 .song__header {
+    position: relative;
     overflow: hidden;
 }
 
@@ -33,13 +34,19 @@
 
 .song__footer {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song__data {
+    display: flex;
     flex-direction: column;
 }
 
 .song__play-button-container {
     position: absolute;
-    bottom: 0rem;
-    right: 1.2rem;
+    bottom: -0.1rem;
+    right: 0.3rem;
     filter: drop-shadow(0px 0px 10px black);
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -54,6 +61,10 @@
     height: 3rem;
 }
 
+.song__like-icon--liked {
+    color: var(--color-green);
+}
+
 .song:hover {
     background-color: var(--bg-card-2-hover);
 }
@@ -63,6 +74,6 @@
 }
 
 .song:hover .song__play-button-container {
-    transform: translateY(-2.3rem);
+    transform: translateY(-0.6rem);
     opacity: 1;
 }

@@ -36,7 +36,7 @@
 
 .button--green {
     --button-color: #000;
-    --button-background-color: #1ed760;
+    --button-background-color: var(--color-green);
     --button-color-hover: #000;
     --button-background-color-hover: #1fdf64;
 }

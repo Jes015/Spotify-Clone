@@ -51,3 +51,35 @@ export const loadSongImageService = (supabaseClient: SupabaseClient, songImagePa
   }
   return newPublicUrl
 }
+
+export const likeSong = async (supabaseClient: SupabaseClient, songId: number, userId: string) => {
+  const { error } = await supabaseClient
+    .from('liked_songs')
+    .insert({
+      song_id: songId,
+      user_id: userId
+    })
+
+  return { error }
+}
+
+export const disLikeSong = async (supabaseClient: SupabaseClient, songId: number, userId: string) => {
+  const { error } = await supabaseClient
+    .from('liked_songs')
+    .delete()
+    .eq('user_id', userId)
+    .eq('song_id', songId)
+
+  return { error }
+}
+
+export const getSongLikeStatus = async (supabaseClient: SupabaseClient, songId: number, userId: string) => {
+  const { error } = await supabaseClient
+    .from('liked_songs')
+    .select('*')
+    .eq('user_id', userId)
+    .eq('song_id', songId)
+    .single()
+
+  return { error }
+}
