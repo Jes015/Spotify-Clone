@@ -5,7 +5,7 @@ import { type FieldError, type UseFormRegisterReturn } from 'react-hook-form'
 import styles from './textField.module.css'
 
 interface Props {
-  label: string
+  label?: string
   placeHolder?: string
   registerData?: UseFormRegisterReturn<string>
   type?: HTMLInputTypeAttribute
@@ -21,12 +21,15 @@ export const TextField: React.FC<Props> = forwardRef(
 
     return (
       <div className={styles.textField}>
-        <label
-          htmlFor={id}
-          className={styles.textField__label}
-        >
-          {label}
-        </label>
+        {
+          label != null &&
+          <label
+            htmlFor={id}
+            className={styles.textField__label}
+          >
+            {label}
+          </label>
+        }
         <Input
           id={id}
           type={type}

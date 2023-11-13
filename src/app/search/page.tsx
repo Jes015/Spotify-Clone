@@ -15,6 +15,7 @@ const SearchPage: React.FC<Props> = async ({ searchParams }) => {
 
   return (
     <div className={styles.searchPage}>
+      <h1 className={styles.searchPage__title}>Search</h1>
       <TextFieldSearch error={songs.error?.message ?? ''} />
       <SongsSection title='Results' songs={songs.data as SongArray} />
     </div>
