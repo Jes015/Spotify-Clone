@@ -1,12 +1,22 @@
 .song {
     position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-    background-color: var(--bg-card-2);
-    padding: 1rem;
     border-radius: 0.3rem;
+}
+
+.song--mini {
+    background-color: var(--bg-primary);
+    flex-direction: row;
+    gap: 1rem;
+    padding-inline-start: 0.5rem;
+    align-items: center;
+}
+.song--default {
+    background-color: var(--bg-card-2);
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+    padding: 1rem;
     cursor: pointer;
     transition: background-color .3s ease;
 }
@@ -18,29 +28,72 @@
 
 .song__image {
     object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.song__image--default {
     width: 100%;
     height: 9.625rem;
-    aspect-ratio: 1/1;
-    filter: blur(8px);
+}
+
+.song__image--mini {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.25rem;
+}
+
+.song__image--loading {
+    filter: blur(4px);
 }
 
 .song__title {
+    text-overflow: ellipsis;
+    overflow: hidden;
     color: var(--text-primary);
 }
 
+.song__title--default {
+
+}
+
+.song__title--mini {
+    font-weight: 500;
+    font-size: 0.8525rem;
+}
+
 .song__author {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.song__author--default {
     font-size: 0.8rem;
+}
+.song__author--mini {
+    font-size: 0.6875rem;
+    font-weight: 500;
 }
 
 .song__footer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+
+.song__footer--default {
+    justify-content: space-between;
+}
+
+.song__footer--mini {
+    justify-content: flex-start;
+    width: 7.25rem;
+    gap: 0.5rem;
+    overflow: hidden;
 }
 
 .song__data {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .song__play-button-container {
@@ -61,11 +114,27 @@
     height: 3rem;
 }
 
+.song__loader-container {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.song__loader-icon {
+    
+}
+
 .song__like-icon--liked {
     color: var(--color-green);
 }
 
-.song:hover {
+.song--default:hover {
     background-color: var(--bg-card-2-hover);
 }
 
@@ -73,7 +142,7 @@
     scale: 1.1;
 }
 
-.song:hover .song__play-button-container {
+.song--default:hover .song__play-button-container {
     transform: translateY(-0.6rem);
     opacity: 1;
 }

@@ -1,4 +1,5 @@
 export * from './Button/CustomButton'
+export * from './CircleLoader/CircleLoader'
 export * from './DropdownMenu/DropdownMenu'
 export * from './Input/Input'
 export * from './LinearLoading/LinearLoading'

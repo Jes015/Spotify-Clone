@@ -40,7 +40,7 @@
     background-color: transparent;
     border: 0px solid var(--thumb-background-color);
     /*  slider progress trick  */
-    box-shadow: -399px 0 0 400px var(--thumb-background-color);
+    box-shadow: -396px 0 0 400px var(--thumb-background-color);
 }
 
 
@@ -52,17 +52,17 @@
     background-color: transparent;
     border: 0px solid var(--thumb-background-color);
     /*  slider progress trick  */
-    box-shadow: -399px 0 0 400px var(--thumb-background-color);
+    box-shadow: -396px 0 0 400px var(--thumb-background-color);
 }
 
 .slider::-webkit-slider-thumb:hover {
     background-color: var(--track-hover-background-color);
-    box-shadow: -399px 0 0 400px var(--track-hover-background-color);
+    box-shadow: -396px 0 0 400px var(--track-hover-background-color);
     border: 0px solid var(--track-hover-background-color);
 }
 
 .slider::-moz-range-thumb:hover {
     background-color: var(--track-hover-background-color);
-    box-shadow: -399px 0 0 400px var(--track-hover-background-color);
+    box-shadow: -396px 0 0 400px var(--track-hover-background-color);
     border: 0px solid var(--track-hover-background-color);
 }

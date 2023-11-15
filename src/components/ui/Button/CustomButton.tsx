@@ -10,10 +10,10 @@ interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, variant = 'default', color, size2 = 'xl', className, rounded = false, onClick, ...props }, ref) => {
+  ({ children, variant = 'default', color, size2 = 'xl', className, rounded = false, onClick, disabled = false, ...props }, ref) => {
     return (
       <button
-        onClick={onClick}
+        onClick={disabled ? () => {} : onClick}
         ref={ref}
         className={
           [
@@ -25,7 +25,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             rounded === 'medium' ? styles['button--rounded-medium'] : '',
             color === 'dark' ? styles['button--dark'] : '',
             color === 'green' ? styles['button--green'] : '',
-            props.disabled === true ? styles['button--disabled'] : '',
+            disabled ? styles['button--disabled'] : '',
             size2 === 'md' ? styles['button--md'] : ''
           ].join(' ')
         }
