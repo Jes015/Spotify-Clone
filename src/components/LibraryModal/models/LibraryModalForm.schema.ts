@@ -5,10 +5,12 @@ export const libraryModalFormSchema = zValidator.object({
   title: zValidator.coerce.string().min(1),
   author: zValidator.coerce.string().min(1),
   song: zValidator
-    .instanceof(FileList)
+    .unknown()
+    .array()
     .refine((files) => files[0] != null, { message: 'Upload your song' }),
   image: zValidator
-    .instanceof(FileList)
+    .unknown()
+    .array()
     .refine((files) => files[0] != null, { message: 'Upload your cover' })
 })
 

@@ -64,7 +64,7 @@ export const useSongPlayerStore = create(
       },
       setVolume: (volume: number) => { set({ volume }) },
       pushToQueue: (song) => {
-        const filteredSongs = [...get().queueSongs].filter((tempSong) => tempSong.id !== song.id)
+        const filteredSongs = [...get().queueSongs].filter((tempSong) => tempSong?.id !== song?.id)
         const newSongs = [...filteredSongs, song]
         set({ queueSongs: newSongs })
         return newSongs.length - 1

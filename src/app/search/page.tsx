@@ -11,7 +11,7 @@ interface Props {
 }
 
 const SearchPage: React.FC<Props> = async ({ searchParams }) => {
-  const songs = await getSongByTitle(searchParams.title)
+  const songs = await getSongByTitle(searchParams?.title)
 
   return (
     <div>

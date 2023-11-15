@@ -11,12 +11,15 @@ export const PlayListHeader: React.FC<Props> = ({ title, description, imageUrl }
   return (
     <header className={styles['songSection__header--playlist']}>
       <div>
-        <Image
-          src={imageUrl}
-          alt='playlist image'
-          width={150}
-          height={150}
-        />
+        {
+          imageUrl != null &&
+          <Image
+            src={imageUrl}
+            alt='playlist image'
+            width={150}
+            height={150}
+          />
+        }
       </div>
       <div>
         <h3 className={

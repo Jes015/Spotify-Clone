@@ -26,8 +26,8 @@ export const Navigation = () => {
             {
                 routesAdaptedData.map((routeData) => (
                     <NavigationItem
-                        key={routeData.title}
-                        title={routeData.title}
+                        key={routeData?.title}
+                        title={routeData?.title}
                         href={routeData.pathname}
                         Icon={routeData.icon}
                         isSelected={currentPathName === routeData.pathname}
