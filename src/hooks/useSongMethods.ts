@@ -31,7 +31,7 @@ export const useSongMethods = () => {
         }
 
         // Create record
-        const { supabaseError } = await uploadSongEntry(supabaseClient, title, user.id, author, imageData?.path as string, songData?.path as string)
+        const { supabaseError } = await uploadSongEntry(supabaseClient, title, user?.id, author, imageData?.path as string, songData?.path as string)
 
         if (supabaseError != null) {
           throw new Error(supabaseError.message)

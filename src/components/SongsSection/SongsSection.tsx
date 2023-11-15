@@ -21,8 +21,8 @@ interface SectionProps extends Props {
 
 export const SongsSection: React.FC<PlayListProps | SectionProps> = (props) => {
   const Header = props.type === 'playlist'
-    ? <PlayListHeader title={props.title} description={props.description} imageUrl={props.imageUrl} />
-    : <SectionHeader title={props.title} />
+    ? <PlayListHeader title={props?.title} description={props.description} imageUrl={props.imageUrl} />
+    : <SectionHeader title={props?.title} />
 
   return (
     <section className={styles.songSection}>
@@ -31,7 +31,7 @@ export const SongsSection: React.FC<PlayListProps | SectionProps> = (props) => {
         {
           props.songs[0] != null &&
           (
-            props.songs.map((song) => (<Song key={song.id} data={song} />))
+            props.songs.map((song) => (<Song key={song?.id} data={song} />))
           )
         }
 

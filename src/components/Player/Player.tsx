@@ -3,14 +3,14 @@ import { usePlayer } from './hooks'
 import styles from './player.module.css'
 
 export const Player = () => {
-  const { currentSongTime, maxSongTime, changeCurrentSongTime, changeVolume } = usePlayer()
+  const { maxSongTime, changeCurrentSongTime, changeVolume } = usePlayer()
 
   return (
     <div className={styles.player}>
       <CurrentSong />
       <MainControls
         sliderValue={0}
-        {...{ currentSongTime, maxSongTime, changeCurrentSongTime }}
+        {...{ maxSongTime, changeCurrentSongTime }}
       />
       <SideRightControls {... { changeVolume }} />
     </div>

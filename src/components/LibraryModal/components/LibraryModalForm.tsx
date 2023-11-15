@@ -23,7 +23,7 @@ export const LibraryModalForm = () => {
   const handleOnClickForSubmit: SubmitHandler<libraryModalFormSchemaType> = async (data) => {
     try {
       globalLoaderStateService.sendMessage()
-      await addSong(data.title, data.author, data.image[0], data.song[0])
+      await addSong(data?.title, data?.author, data.image[0] as File, data.song[0] as File)
       toastUtils.success('Song added')
       refresh()
     } catch (error) {
@@ -42,27 +42,27 @@ export const LibraryModalForm = () => {
                 label='title'
                 placeHolder='Dakiti, Verde, Eclipse ...'
                 registerData={register('title')}
-                error={formState.errors.title}
+                error={formState.errors?.title}
             />
             <TextField
                 label='author'
                 placeHolder='Bad bunny, blessed, maluma ...'
                 registerData={register('author')}
-                error={formState.errors.author}
+                error={formState.errors?.author}
             />
             <TextField
                 label='Cover file'
                 type='file'
                 accept='image/*'
                 registerData={register('image')}
-                error={formState.errors.image}
+                error={formState.errors.image as unknown as string}
             />
             <TextField
                 label='Song file'
                 type='file'
                 accept='audio/mp3'
                 registerData={register('song')}
-                error={formState.errors.song}
+                error={formState.errors.song as unknown as string}
             />
             <Button
                 className={styles.libraryModalForm__button}

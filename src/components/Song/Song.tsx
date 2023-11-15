@@ -16,9 +16,9 @@ interface Props {
 
 export const Song: React.FC<Props> = ({ data, type = 'default' }) => {
   const { user } = useGlobalUser()
-  const { isLiked, toggleSongLike } = useSongLike(data.id)
+  const { isLiked, toggleSongLike } = useSongLike(data?.id)
   const { loadSongImage } = useSongMethods()
-  const songImage = loadSongImage(data.image_path)
+  const songImage = loadSongImage(data?.image_path)
   const [queueSongs, isPlaying, toggleIsPlaying, pushToQueueAndSet, isLoadingSong, indexInQueueSong] = useSongPlayerStore(
     state => [
       state.queueSongs,
@@ -31,7 +31,7 @@ export const Song: React.FC<Props> = ({ data, type = 'default' }) => {
   )
 
   const lastSong = queueSongs[indexInQueueSong]
-  const isThisTheCurrentSong = lastSong?.id === data.id
+  const isThisTheCurrentSong = lastSong?.id === data?.id
 
   const handleOnClickForToggleSongLike = () => {
     void toggleSongLike()
@@ -60,20 +60,25 @@ export const Song: React.FC<Props> = ({ data, type = 'default' }) => {
       ].join(' ')
     }>
       <header className={styles.song__header}>
-        <Image
-          className={
-            [
-              styles.song__image,
-              type === 'default' ? styles['song__image--default'] : '',
-              type === 'mini' ? styles['song__image--mini'] : '',
-              (isLoadingSong && isThisTheCurrentSong) ? styles['song__image--loading'] : ''
-            ].join(' ')
-          }
-          src={songImage as string}
-          alt={`${data.title} of ${data.author}`}
-          width={150}
-          height={150}
-        />
+        {
+          (type != null && songImage != null) &&
+          (
+            <Image
+              className={
+                [
+                  styles.song__image,
+                  type === 'default' ? styles['song__image--default'] : '',
+                  type === 'mini' ? styles['song__image--mini'] : '',
+                  (isLoadingSong && isThisTheCurrentSong) ? styles['song__image--loading'] : ''
+                ].join(' ')
+              }
+              src={songImage}
+              alt={`${data?.title} of ${data?.author}`}
+              width={150}
+              height={150}
+            />
+          )
+        }
         {
           type === 'default' &&
           (
@@ -117,7 +122,7 @@ export const Song: React.FC<Props> = ({ data, type = 'default' }) => {
               type === 'mini' ? styles['song__title--mini'] : ''
             ].join(' ')
           }>
-            {data.title}
+            {data?.title}
           </span>
           <span className={
             [
@@ -126,7 +131,7 @@ export const Song: React.FC<Props> = ({ data, type = 'default' }) => {
               type === 'mini' ? styles['song__author--mini'] : ''
             ].join(' ')
           }>
-            {data.author}
+            {data?.author}
           </span>
         </div>
         <div>
