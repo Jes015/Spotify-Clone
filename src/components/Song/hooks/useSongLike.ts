@@ -1,9 +1,10 @@
+import { authModalStateService } from '@/components/AuthModal/services'
 import { useGlobalUser } from '@/hooks'
 import { disLikeSong as disLikeSongService, getSongLikeStatus, likeSong as likeSongService } from '@/services'
 import { useSupabaseClient } from '@supabase/auth-helpers-react'
 import { useEffect, useState } from 'react'
 
-export const useSong = (songId: number) => {
+export const useSongLike = (songId: number) => {
   const [isLiked, setIsLiked] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
   const { user } = useGlobalUser()
@@ -22,18 +23,18 @@ export const useSong = (songId: number) => {
     }
 
     void asyncExecutionContext()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user])
+  }, [user, songId, supabaseClinet])
 
   const toggleSongLike = async () => {
-    if (isLoading) return
+    if (isLoading || user == null) {
+      authModalStateService.sendMessage()
+      return
+    }
 
     setIsLoading(true)
     if (!isLiked) {
-      console.log('liking')
       await likeSong()
     } else {
-      console.log('disliking')
       await disLikeSong()
     }
     setIsLoading(false)

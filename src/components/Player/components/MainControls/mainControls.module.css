@@ -24,6 +24,12 @@
     font-size: 0.6875rem;
 }
 
+.mainControls__song-time {
+    display: inline-flex;
+    width: 2.2375rem;
+    overflow: hidden;
+}
+
 .mainControls__sliderTime > span {
     line-height: 0.6rem;
 }

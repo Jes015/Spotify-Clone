@@ -14,7 +14,7 @@
 .currentSong__title {
     color: var(--text-primary);
     font-weight: 500;
-    font-size: 0.8125rem;
+    font-size: 0.8525rem;
 }
 
 .currentSong__artist {
@@ -23,5 +23,7 @@
 }
 
 .currentSong__image {
+    width: 3.5rem;
+    aspect-ratio: 1/1;
     border-radius: 0.25rem;
 }
