@@ -1,9 +1,7 @@
-interface Props {
-  children: React.ReactNode
-}
-
-export default function Profile ({ children }: Props) {
+export default function Profile () {
   return (
-        <span>Profile</span>
+    <>
+      <span>Profile</span>
+    </>
   )
 }
